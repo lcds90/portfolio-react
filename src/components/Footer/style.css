@@ -1,0 +1,40 @@
+footer {
+    width: 100%;
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 90px);
+    background-color: var(--theme-color);
+    border-radius: 25px 25px 0 0;
+}
+
+footer div {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div:first-of-type {
+    text-align: center;
+    vertical-align: middle;
+    border: 5px double;
+    border-color: var(--theme-color);
+    border-right-color: var(--theme-dark);
+    border-radius: 50px;
+    color: white;
+    text-shadow: 2px 2px 5px var(--theme-dark);
+}
+
+.circle-img img {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px var(--theme-dark);
+}
+
+@media (min-width: 800px) {
+    footer {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+    }
+}

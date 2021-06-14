@@ -5,6 +5,12 @@ import './style.css'
 const Home = () => {
     return (
         <div className="home">
+            <div className="person">
+                <img
+                    src={`${process.env.PUBLIC_URL}/img/profile.png`}
+                    alt="Foto de Leonardo Santos"
+                />
+            </div>
             <div className="title">
                 <h1>
                     <p>Olá!</p>
@@ -14,12 +20,6 @@ const Home = () => {
                 <Link to="about">
                     <button>Sobre mim</button>
                 </Link>
-            </div>
-            <div className="person">
-                <img
-                    src={`${process.env.PUBLIC_URL}/profile.png`}
-                    alt="Foto de Leonardo Santos"
-                />
             </div>
         </div>
     )
