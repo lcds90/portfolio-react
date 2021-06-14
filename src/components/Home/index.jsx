@@ -1,6 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './style.css'
+import React from 'react';
+import './style.css';
 
 const Home = () => {
     return (
@@ -17,9 +16,8 @@ const Home = () => {
                     <p>Sou Leonardo Santos</p>
                     <p>Bem vindo ao meu portfólio!</p>
                 </h1>
-                <Link to="about">
-                    <button>Sobre mim</button>
-                </Link>
+                
+                
             </div>
         </div>
     )

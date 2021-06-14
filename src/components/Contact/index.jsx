@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import './style.css';
 
-const Footer = () => {
+const Contact = () => {
     return (
         <footer>
             <div><em>Contato</em></div>
@@ -34,4 +34,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default Contact
