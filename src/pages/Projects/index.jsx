@@ -60,7 +60,7 @@ function SetNavbar(props) {
     threshold: isMobile ? 1000 : 800
     });
     return (
-        <Slide direction="up"  in={trigger}>
+        <Slide direction="right"  in={trigger}>
             {children}
         </Slide>
     );
