@@ -19,10 +19,15 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
+    fontWeight: 700,
+    letterSpacing: '2px',
+    borderRight: '2px gray double',
+    padding: '1vh 1vw'
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.secondary,
+    padding: '1vh 1vw'
   },
   icon: {
     verticalAlign: 'bottom',
@@ -48,6 +53,9 @@ const useStyles = makeStyles((theme) => ({
     borderLeft: `2px solid ${theme.palette.divider}`,
     padding: theme.spacing(1, 2),
   },
+  accordion: {
+    backgroundColor: 'silver'
+  },
   link: {
     color: theme.palette.primary.main,
     textDecoration: 'none',
@@ -62,8 +70,7 @@ function AccordionProject({ project }) {
 
   return (
     <div className={classes.root}>
-     
-      <Accordion>
+      <Accordion className={classes.accordion}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1c-content"

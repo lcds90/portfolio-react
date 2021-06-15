@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
+    margin-top:2vh;
 }
 
 .home .title {
@@ -43,6 +44,7 @@
     .home {
         flex-direction: row;
         justify-content: space-between;
+        margin-top:0;
     }
     .home .title,
     .home .person {

@@ -19,6 +19,38 @@
     color: var(--theme-dark);
 }
 
+.navbar {
+    position: fixed;
+    width: 5%;
+    height: 90%;
+    left: 5%; /* required */
+    bottom: 0;
+    font-size: 0.75rem;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme-dark);
+    border-top: inset 20px var(--theme-color);
+}
+
+.project-title {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--theme-light);
+    margin: 0 5px;
+    padding: 5px;
+    border-radius:15px;
+}
+
 ul {
     list-style: none;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        left:0;
+    }
 }
