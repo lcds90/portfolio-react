@@ -13,19 +13,17 @@
   margin:0;
 }
 
+html, body {
+  background-color: var(--theme-alt-one);
+  overflow-x: hidden;
+}
+
+#root {
+  background-color: var(--theme-dark);
+}
+
 body {
   font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--theme-dark);
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1280px;
-}
-
-p {
-  line-height: 30px;
 }

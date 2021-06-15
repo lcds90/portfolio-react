@@ -1,20 +1,21 @@
-footer {
+header {
     width: 100%;
     padding: 10px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 90px);
+    grid-template-rows: repeat(1, 90px);
     background-color: var(--theme-color);
-    border-radius: 25px 25px 0 0;
+    margin-bottom: 10vh;
+    /* border-radius: 25px 25px 0 0; */
 }
 
-footer div {
+header div {
     display:flex;
     justify-content: center;
     align-items: center;
 }
 
-footer div:first-of-type {
+.contact {
     text-align: center;
     vertical-align: middle;
     border: 5px double;
@@ -33,7 +34,7 @@ footer div:first-of-type {
 }
 
 @media (min-width: 800px) {
-    footer {
+    header {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr;
     }

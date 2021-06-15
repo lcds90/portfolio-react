@@ -1,0 +1,24 @@
+.projects * {
+    z-index:1 !important;
+    position: relative;
+}
+
+.projects {
+    flex-grow: 1;
+    position: relative;
+    height: 100%;
+    margin: 5vh 0;
+    z-index:0;
+}
+
+.projects h1 {
+    margin: 40px 0;
+    border-bottom: 2px double var(--theme-light);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--theme-dark);
+}
+
+ul {
+    list-style: none;
+}

@@ -3,6 +3,7 @@ import './style.css';
 
 const Home = () => {
     return (
+        <section>
         <div className="home">
             <div className="person">
                 <img
@@ -20,6 +21,8 @@ const Home = () => {
                 
             </div>
         </div>
+       
+        </section>
     )
 }
 export default Home;

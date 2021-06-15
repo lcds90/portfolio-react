@@ -3,8 +3,8 @@ import './style.css';
 
 const Contact = () => {
     return (
-        <footer>
-            <div><em>Contato</em></div>
+        <header>
+            <div className="contact"><em>Contato</em></div>
             <div className="circle-img">
                 <a rel="noopener noreferrer" target="_blank" href="http://github.com/lcds90">
                     <img src={`${process.env.PUBLIC_URL}/svg/github.svg`} alt="Github" />
@@ -30,7 +30,7 @@ const Contact = () => {
             <div className="circle-img">
                 <img src={`${process.env.PUBLIC_URL}/svg/whatsapp.svg`} alt="Whatsapp" />
             </div>
-        </footer>
+        </header>
     )
 }
 
