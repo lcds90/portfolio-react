@@ -43,7 +43,7 @@ const renderProjects = (project) => {
                 </Grid>
                 <Grid item md={6} xs={12}>
                     <ScrollAnimation offset={500} duration={2} animateIn="backInRight " animateOut="backOutLeft">
-                        <Slideshow />
+                        <Slideshow images={project.images}/>
                     </ScrollAnimation>
                 </Grid>
             </Grid>
@@ -53,7 +53,6 @@ const renderProjects = (project) => {
 
 function SetNavbar(props) {
     const { children } = props;
-    console.log(window.screen.width);
     const isMobile = window.screen.width <= 768 ? true : false
     const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -68,10 +67,6 @@ function SetNavbar(props) {
 
 SetNavbar.propTypes = {
     children: PropTypes.element.isRequired,
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
     window: PropTypes.func,
 };
 
