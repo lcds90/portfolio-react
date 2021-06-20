@@ -2,8 +2,8 @@ const projects = [
     {
         id: 1,
         title: '[Réplica] Netflix',
-        description: 'Clone de interface do Netflix.',
-        info: 'Este projeto consiste em um clone da interface do netflix, porém utilizando a API do themoviedb',
+        description: 'Clone de interface do Netflix',
+        info: 'Este projeto consiste em um clone da interface do serviço de streaming Netflix, porém no projeto foi utilizado a API do themoviedb para mostrar o catalogo de filmes e séries exibidas',
         techs: 'HTML, CSS, Javascript',
         links: {
             deploy: 'http://netflix.lcds.me/',
