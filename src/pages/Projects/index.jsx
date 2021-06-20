@@ -82,7 +82,9 @@ const Projects = (props) => {
             </div>
             <SetNavbar {...props}>
                 <div className="navbar">
-                    {projects.map(renderProjectsTitle)}
+                    {
+                        
+                        projects.map(renderProjectsTitle)}
                 </div>
             </SetNavbar>
         </>

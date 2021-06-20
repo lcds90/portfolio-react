@@ -12,7 +12,7 @@ const projects = [
         ]
     },
     {
-        id: 2,
+        id: 3,
         title: 'Tela Netflix',
         description: 'Recriação de tela inicial do Netflix.',
         info: 'Informações',
