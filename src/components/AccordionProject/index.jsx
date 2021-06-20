@@ -22,12 +22,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     letterSpacing: '2px',
     borderRight: '2px gray double',
-    padding: '1vh 1vw'
+    padding: '1vh 1vw',
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.secondary,
-    padding: '1vh 1vw'
+    padding: '1vh 1vw',
   },
   icon: {
     verticalAlign: 'bottom',
@@ -37,14 +37,14 @@ const useStyles = makeStyles((theme) => ({
   details: {
     alignItems: 'center',
     background: 'var(--theme-dark)',
-    color: 'white'
+    color: 'white',
   },
   actions: {
-    background: 'var(--theme-alt-one)'
+    background: 'var(--theme-alt-one)',
   },
   buttons: {
     background: 'grey',
-    borderRadius: '5px'
+    borderRadius: '5px',
   },
   column: {
     flexBasis: '50%',
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1, 2),
   },
   accordion: {
-    backgroundColor: 'silver'
+    backgroundColor: 'silver',
   },
   link: {
     color: theme.palette.primary.main,
@@ -73,32 +73,43 @@ function AccordionProject({ project }) {
       <Accordion className={classes.accordion}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1c-content"
-          id="panel1c-header"
+          aria-controls='panel1c-content'
+          id='panel1c-header'
         >
           <div className={classes.column}>
             <Typography className={classes.heading}>{project.title}</Typography>
           </div>
           <div className={classes.column}>
-            <Typography className={classes.secondaryHeading}>{project.description}</Typography>
+            <Typography className={classes.secondaryHeading}>
+              {project.description}
+            </Typography>
           </div>
         </AccordionSummary>
         <AccordionDetails className={classes.details}>
-          <div className={classes.column}>
-            {project.info}
-          </div>
+          <div className={classes.column}>{project.info}</div>
           <div className={clsx(classes.column, classes.helper)}>
-            <Typography variant="caption">
+            <Typography variant='caption'>
+              <em>Tecnologias utilizadas</em> <br />
               {project.techs}
             </Typography>
           </div>
         </AccordionDetails>
         <Divider />
         <AccordionActions className={classes.actions}>
-          <Button className={classes.buttons} size="small">
+          <Button
+            href={project.links.deploy}
+            target='_blank'
+            className={classes.buttons}
+            size='small'
+          >
             <HttpTwoToneIcon />
           </Button>
-          <Button className={classes.buttons} size="small" >
+          <Button
+            href={project.links.github}
+            target='_blank'
+            className={classes.buttons}
+            size='small'
+          >
             <GitHubIcon />
           </Button>
         </AccordionActions>
@@ -109,6 +120,6 @@ function AccordionProject({ project }) {
 
 AccordionProject.propTypes = {
   project: PropTypes.object,
-}
+};
 
 export default AccordionProject;

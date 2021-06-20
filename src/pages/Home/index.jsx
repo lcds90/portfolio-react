@@ -7,7 +7,7 @@ const Home = () => {
         <div className="home">
             <div className="person">
                 <img
-                    src={`${process.env.PUBLIC_URL}/img/profile.png`}
+                    src='/img/profile.png'
                     alt="Foto de Leonardo Santos"
                 />
             </div>

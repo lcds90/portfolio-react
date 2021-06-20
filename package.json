@@ -16,6 +16,7 @@
     "react-animated-css": "^1.2.1",
     "react-dom": "^17.0.0",
     "react-gsap": "^3.2.1",
+    "react-material-ui-carousel": "^2.2.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"

@@ -3,13 +3,12 @@ import './style.css';
 import projects from './data';
 import Grid from '@material-ui/core/Grid';
 import AccordionProject from '../../components/AccordionProject';
-import Slideshow from '../../components/Slideshow';
+import BoxImage from '../../components/BoxImage';
 import { makeStyles } from '@material-ui/core/styles';
 import ScrollAnimation from 'react-animate-on-scroll'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 import PropTypes from 'prop-types';
-
 const UseStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
@@ -43,7 +42,7 @@ const renderProjects = (project) => {
                 </Grid>
                 <Grid item md={6} xs={12}>
                     <ScrollAnimation offset={500} duration={2} animateIn="backInRight " animateOut="backOutLeft">
-                        <Slideshow images={project.images}/>
+                        <BoxImage project={project}/>
                     </ScrollAnimation>
                 </Grid>
             </Grid>
