@@ -67,7 +67,7 @@ export default function FullScreenImage(props) {
       <Button variant="contained" color="primary" onClick={handleClickOpen}>
         Abrir imagens do projeto
       </Button>
-      <Dialog disableScrollLock={ true } open={open} onClose={handleClose} TransitionComponent={Transition}>
+      <Dialog disableScrollLock={true} open={open} onClose={handleClose} TransitionComponent={Transition}>
         <AppBar className={classes.appBar}>
           <Toolbar>
             <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
