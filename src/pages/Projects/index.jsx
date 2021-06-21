@@ -14,7 +14,7 @@ const UseStyles = makeStyles((theme) => ({
         width: '100%',
     },
     line: {
-        margin: '10vh 0 30vh 0',
+        margin: '0 0 30vh 0',
     }
 }));
 
@@ -27,21 +27,21 @@ const locateProject = (event) => {
   };
 
 const renderProjectsTitle = (project) => {
-    return <div onClick={locateProject} className="project-title" anchor={project.title.split('')[0]+project.id} key={project.id}>{project.title}</div>;
+    return <div onClick={locateProject} className="project-title" anchor={project.id} key={project.id}>{project.title}</div>;
 }
 
 const renderProjects = (project) => {
     const classes = UseStyles();
     return (
-        <li key={project.id} id={project.title.split('')[0]+project.id} className={classes.line}>
+        <li key={project.id} id={project.id} className={classes.line}>
             <Grid justify="center" alignItems="center" container spacing={3}>
                 <Grid item md={6} xs={12}>
-                    <ScrollAnimation offset={500} duration={1} animateIn="backInLeft" animateOut="backOutRight">
+                    <ScrollAnimation offset={300} duration={1} animateIn="backInLeft" animateOut="backOutRight">
                         <AccordionProject project={project} />
                     </ScrollAnimation>
                 </Grid>
                 <Grid item md={6} xs={12}>
-                    <ScrollAnimation offset={500} duration={2} animateIn="backInRight " animateOut="backOutLeft">
+                    <ScrollAnimation offset={300} duration={2} animateIn="backInRight " animateOut="backOutLeft">
                         <BoxImage project={project}/>
                     </ScrollAnimation>
                 </Grid>

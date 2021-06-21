@@ -21,11 +21,15 @@ const UseStyles = makeStyles((theme) => ({
     flex: 1,
   },
   img: {
-    width: 'auto',
-    height: 'auto',
-    maxWidth: '100%',
-    maxHeight: '700px'
+    width: '100%',
+    height: '700px',
+    objectFit: 'contain'
   },
+  carousel: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -35,10 +39,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const renderProjectsImages = (image, index) => {
   const classes = UseStyles();
   return (
-    <Box
-    marginTop="25px"
-    display="flex"
-    justifyContent="center">
     <img
       id={'image' + index}
       key={index}
@@ -46,7 +46,6 @@ const renderProjectsImages = (image, index) => {
       src={image}
       alt=''
     />
-    </Box>
   );
 };
 
@@ -78,8 +77,8 @@ export default function FullScreenImage(props) {
             </Typography>
           </Toolbar>
         </AppBar>
-        <Box maxWidth="550px" minHeight="700px">
-        <Carousel fullHeightHover={false} animation='fade' indicators={false} navButtonsAlwaysVisible='true'>
+        <Box >
+        <Carousel className={classes.carousel} fullHeightHover={false} animation='fade' indicators={false} navButtonsAlwaysVisible='true'>
           {props.project.images.map(renderProjectsImages)}
         </Carousel>
         </Box>
