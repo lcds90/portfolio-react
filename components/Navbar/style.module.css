@@ -1,0 +1,11 @@
+.navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    z-index: 25;
+    border-bottom: 2px solid var(--primary-color);
+}

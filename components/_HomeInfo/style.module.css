@@ -1,0 +1,123 @@
+.section {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid: 1fr / 1fr;
+    border-bottom: 0.5px solid var(--primary-color);
+    background-color: var(--primary-color-light);
+    padding: 10px;
+}
+
+.articleInfo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.nameProfile {
+    width: 100%;
+    text-align: end;
+    font-weight: 300;
+    font-size: 2rem;
+    color: var(--primary-color-light);
+    display: inline;
+    position: absolute;
+    bottom: 5vh;
+    right: 2vw;
+    line-height: 0;
+    z-index: 20;
+    padding: 25px 40px 25px 0;
+    background-color: var(--primary-color-dark);
+}
+
+.welcome {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2rem;
+    color: var(--primary-color-dark);
+    padding: 5px;
+    margin: 10px 20px;
+}
+
+.grid {
+    width: 100%;
+    display:grid;
+    padding: 10px;
+    grid: 1fr / 1fr 40%;
+    place-items: center;
+    overflow: hidden;
+}
+
+.description {
+    background-color: var(--primary-color-dark);
+    color: white;
+    padding: 5px;
+    width: 100%;
+    margin: 0;
+    line-height: 2rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border: 2px white inset;
+    text-align: center;
+    z-index: 25;
+}
+
+.stacks {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+
+}
+
+.stack {
+    width: 200px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 2px;
+}
+
+.html5 {
+    background-color: rgb(227,79,38);
+}
+
+.css3 {
+    background-color: rgb(48,114,183);
+}
+
+.js {
+    background-color: rgb(247,223,30);
+}
+
+.react {
+    background-color: rgb(32,35,42);
+}
+
+.node {
+    background-color: rgb(67,133,61);
+}
+
+.ts {
+    background-color: rgb(55,122,204);
+}
+
+@media screen and (min-width: 600px) {
+    .section {
+    grid: 1fr / 1fr 1fr;
+    }
+
+    .nameProfile {
+    width: 50vw;
+    /* bottom: 20vh; */
+    padding: 30px 40px 35px 0;
+    }
+}
