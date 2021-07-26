@@ -1,14 +1,10 @@
-import { ReactElement } from "react"
-import style from './style.module.css'
+import { ReactElement } from 'react';
+import style from './style.module.css';
 
 type NavbarProps = {
-    children: ReactElement | ReactElement[];
+  children: ReactElement | ReactElement[];
 };
 
-export const Navbar = ({children}: NavbarProps) => {
-  return (
-    <nav className={style.navbar}>
-        {children}
-    </nav>
-    )
-}
+export const Navbar = ({ children }: NavbarProps) => {
+  return <nav className={style.navbar}>{children}</nav>;
+};

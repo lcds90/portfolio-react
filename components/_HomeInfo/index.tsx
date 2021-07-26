@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Contact } from '@components/Contact'
 
 import style from './style.module.css';
 
@@ -52,7 +53,7 @@ export const HomeInfo = () => {
 
   const generateStacks = () => {
     return svgs.map((svgObj) => (
-      <div className={`${style.stack} ${svgObj.classname}`}>
+      <div key={svgObj.alt} className={`${style.stack} ${svgObj.classname}`}>
         <Image layout='fixed' src={svgObj.svg} alt={svgObj.alt} />
       </div>
     ));
@@ -61,13 +62,13 @@ export const HomeInfo = () => {
   return (
     <section className={style.section}>
       <article className={style.articleInfo}>
-        <h1 className={style.nameProfile}>Leonardo Santos</h1>
+        <h1 className={style.nameProfile}>Leonardo Conceição <br /> dos Santos</h1>
         <Image
           className={style.profile}
           width='400px'
           height='400px'
           src={profilePic}
-          alt='Picture of the author'
+          alt='Foto de Leonardo Santos'
         />
       </article>
       <article>
@@ -76,13 +77,16 @@ export const HomeInfo = () => {
         </h2>
         <div className={style.grid}>
           <p className={style.description}>
-            Aspirante á <b>Desenvolvedor Web Fullstack</b><br />
-            <b>Apaixonado</b> por tecnologia <br />
-            <b>Estudante</b> de Desenvolvimento Web Fullstack na <b>Trybe</b><br />
-            Formado em <b>Tecnologia em Sistemas para Internet</b>
+            Aspirante á <span>Desenvolvedor Web Fullstack</span><br />
+            <span>Apaixonado</span> por tecnologia <br />
+            <span>Estudante</span> de Desenvolvimento Web Fullstack na <span>Trybe</span><br />
+            Formado em <span>Tecnologia em Sistemas para Internet</span>
           </p>
-          <p className={style.stacks}>{generateStacks()}</p>
+          <div className={style.stacks}>{generateStacks()}</div>
         </div>
+      </article>
+      <article>
+      <Contact />
       </article>
     </section>
   );

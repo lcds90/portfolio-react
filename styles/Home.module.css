@@ -4,7 +4,7 @@
   max-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px 1fr 50px;
+  grid-template-rows: 50px 1fr;
 }
 
 .header {
@@ -26,13 +26,4 @@ overflow-y: auto;
 .roadmap {
   display:grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary-color-light);
-    border-top: 0.5px solid var(--primary-color);
 }

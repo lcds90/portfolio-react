@@ -17,6 +17,7 @@
     "paths": {
       "@assets/*": ["assets/*"],
       "@img/*": ["assets/img/*"],
+      "@projects/*": ["assets/img/projects/*"],
       "@svg/*": ["assets/svg/*"],
       "@components/*": ["components/*"],
       "@styles/*":["styles/*"],

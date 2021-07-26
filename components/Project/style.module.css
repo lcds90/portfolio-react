@@ -1,0 +1,148 @@
+.card {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  overflow-y: auto;
+  border-block: 5px solid var(--primary-color);
+  overflow-x: hidden;
+}
+
+.card > article {
+  height: 100%;
+  padding: 3px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 100px;
+  place-items: center;
+  padding: 5px;
+  border-bottom: 2.5px double var(--primary-color);
+}
+
+.texts {
+  padding: 3px;
+  margin-inline: 0.5rem;
+  border-radius: 10px;
+  color: black;
+  height: 100%;
+}
+
+.texts article:nth-of-type(2) {
+  font-weight: 200;
+  color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+  text-align: justify;
+  margin-block: 10px;
+  padding: 0.5px;
+  border-radius: 5px;
+  font-size: 1.05rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texts article:nth-of-type(1) {
+  background-color: rgb(224, 224, 224);
+  padding: 5px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-align: center;
+  font-style: italic;
+  width: 80%;
+  margin: auto;
+}
+
+.texts article:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.texts article:nth-of-type(3) span {
+  width: 80px;
+  height: 50px;
+  padding: 5px;
+  background-color: var(--primary-color);
+  color: var(--primary-color-light);
+  font-weight: 300;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+  margin: 5px;
+}
+
+.info h1 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  background-color: var(--primary-color-light);
+  padding: 10px;
+}
+
+.info span {
+  grid-column: span 2;
+}
+
+.info a {
+  padding: 10px;
+  background-color: var(--primary-color-dark);
+  width: 99%;
+  height: 50%;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px inset var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.info a svg {
+  margin-inline: 5px;
+}
+
+.info > section {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  .info {
+    grid-template-rows: 1fr 50px;
+  }
+
+  .info a {
+    height: 100%;
+  }
+
+  .texts article:nth-of-type(3) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+  .texts article:nth-of-type(3) span {
+    margin: 0;
+    width: 80px;
+    height: 40px;
+  }
+}

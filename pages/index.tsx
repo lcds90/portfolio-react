@@ -4,29 +4,33 @@ import styles from '@styles/Home.module.css';
 
 import { HomeInfo } from '@components/_HomeInfo';
 import { About } from '@components/_About';
+import { Projects } from '@components/_Projects';
 import { Navbar } from '@components/Navbar';
-import { Button } from '@components/Button'
-
+import { Button } from '@components/Button';
 type Topic = {
   name: string;
   link: string;
   color: string;
 };
 
-type TopicToSelect = {
-  [key: string]: JSX.Element;
-};
-
 export default function Home() {
-
   const topics: Topic[] = [
-    { name: 'Home', link: '', color: 'primary' },
-    { name: 'About', link: 'about', color: 'light' },
+    { name: 'LCDS', link: '#home', color: 'primary' },
+    { name: 'Sobre mim', link: '#about', color: 'light' },
+    { name: 'Projetos', link: '#projects', color: 'light' },
   ];
+
+  const locateProject = (link: any) => {
+    const anchor = document.querySelector(link)
+
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
 
   const generateNavItems = (topic: Topic) => {
     return (
-      <li key={topic.name} onClick={() => console.log(topic)}>
+      <li key={topic.name} onClick={() => locateProject(topic.link)}>
         <Button text={topic.name} color={topic.color} />
       </li>
     );
@@ -38,12 +42,12 @@ export default function Home() {
         <Navbar>{topics.map(generateNavItems)}</Navbar>
       </header>
       <section className={styles.main}>
-          <HomeInfo />
-          <About />
+        <span id="home"></span>
+        <HomeInfo />
+        <About />
+        <span id="projects"></span>
+        <Projects />
       </section>
-      <footer className={styles.footer}>
-        Bons estudos e sempre acredite em você!
-      </footer>
     </main>
   );
 }

@@ -1,0 +1,11 @@
+.verticalLine {
+    width: 100%;
+    border-block: 4px solid white;
+    background-color: var(--primary-color-light);
+    padding: 10px;
+    font-weight: 200;
+}
+
+.vlEl {
+    padding: 25px;
+}
