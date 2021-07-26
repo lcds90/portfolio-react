@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import style from './style.module.css';
 
 import svg_wpp from '@svg/whatsapp.svg';
@@ -35,7 +33,7 @@ export const Contact = () => {
   const generateContact = (contact: contactType, index: number) => {
     return (
       <a key={index} className={style.contact} target='_blank' href={contact.link}>
-        <Image src={contact.svg} alt="" />
+        <img src={contact.svg.src} alt="" />
       </a>
     );
   };

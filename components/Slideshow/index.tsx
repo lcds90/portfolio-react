@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import styles from './style.module.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
@@ -15,11 +13,10 @@ export const Slideshow = ({ images }: SlideshowProps) => {
         <Carousel showThumbs={false} infiniteLoop={true} dynamicHeight={true}>
           {images.map((image: StaticImageData, index: number) => {
             return (
-              <Image
-                src={image}
+              <img
+                src={image.src}
                 className={styles.slide}
                 key={index}
-                layout="intrinsic"
               />
             );
           })}

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Contact } from '@components/Contact'
 
 import style from './style.module.css';
@@ -54,7 +53,7 @@ export const HomeInfo = () => {
   const generateStacks = () => {
     return svgs.map((svgObj) => (
       <div key={svgObj.alt} className={`${style.stack} ${svgObj.classname}`}>
-        <Image layout='fixed' src={svgObj.svg} alt={svgObj.alt} />
+        <img src={svgObj.svg.src} alt={svgObj.alt} />
       </div>
     ));
   };
@@ -63,11 +62,11 @@ export const HomeInfo = () => {
     <section className={style.section}>
       <article className={style.articleInfo}>
         <h1 className={style.nameProfile}>Leonardo Conceição <br /> dos Santos</h1>
-        <Image
+        <img
           className={style.profile}
           width='400px'
           height='400px'
-          src={profilePic}
+          src={profilePic.src}
           alt='Foto de Leonardo Santos'
         />
       </article>
