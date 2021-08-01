@@ -1,3 +1,7 @@
+import pixelsart01 from '@projects/pixelsart01.png';
+import pixelsart02 from '@projects/pixelsart02.png';
+import playgroundFunctions01 from '@projects/playgroundFunctions1.png';
+import playgroundFunctions02 from '@projects/playgroundFunctions2.png';
 import trybewartsDesktop01 from '@projects/trybewarts01.png';
 import trybewartsDesktop02 from '@projects/trybewarts02.png';
 import trybewartsDesktop03 from '@projects/trybewarts03.png';
@@ -54,10 +58,34 @@ const projects = [
     images: [trybewartsDesktop01, trybewartsDesktop02, trybewartsDesktop03, trybewartsDesktop04, trybewartsMobile01, trybewartsMobile02],
   },
   {
+    id: 'playground',
+    title: '[Projeto] Playground Functions',
+    description: 'Projeto realizado na Trybe',
+    info: 'Exercicios de logica de Javascript, porem no projeto foi implementado uma visualizacao para as funcoes.',
+    techs: ['HTML', 'CSS', 'Javascript'],
+    links: {
+      deploy: 'https://lcds90.github.io/project-playground-functions/',
+      github: 'https://github.com/lcds90/project-playground-functions',
+    },
+    images: [playgroundFunctions01, playgroundFunctions02],
+  },
+  {
+    id: 'pixelsart',
+    title: '[Projeto] Pixels Art',
+    description: 'Projeto realizado na Trybe',
+    info: 'O projeto foi construindo praticando e exercendo conceitos de HTML e CSS, com manipulacao do DOM Javascript.',
+    techs: ['HTML', 'CSS', 'Javascript'],
+    links: {
+      deploy: 'https://lcds90.github.io/project-pixels-art/',
+      github: 'https://github.com/lcds90/project-pixels-art',
+    },
+    images: [pixelsart01, pixelsart02],
+  },
+  {
     id: 'cotacoes',
     title: '[Projeto] Cotações Financeiras',
     description: 'Dashboard de cotações com Angular e Spring Boot',
-    info: 'Este projeto consiste em um dashobard de lista de cotações, o projeto foi realizado com o framework front-end Angular e tendo como back end Java, através de uma API realizada com Spring Boot. https://redirect.is/cotacoesjava https://redirect.is/gitjava',
+    info: 'Este projeto consiste em um dashobard de lista de cotações, o projeto foi realizado com o framework front-end Angular e tendo como back end Java, através de uma API realizada com Spring Boot. (Demora um pouco a carregar, pois API esta em modo de sleep)',
     techs: ['Angular', 'Java (Spring Boot)'],
     links: {
       deploy: 'https://lcds90.github.io/cotacoes-santander-ng/dashboard',
