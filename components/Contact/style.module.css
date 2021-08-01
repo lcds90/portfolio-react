@@ -1,6 +1,8 @@
 .contactContainer {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     background-color: var(--primary-color-dark);
     border-radius: 25px;
@@ -33,5 +35,7 @@
 @media screen and (min-width: 600px) {
     .contactContainer {
         width: 60%;
+        flex-direction: row;
+
     }
 }

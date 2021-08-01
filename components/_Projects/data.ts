@@ -1,3 +1,9 @@
+import trybewartsDesktop01 from '@projects/trybewarts01.png';
+import trybewartsDesktop02 from '@projects/trybewarts02.png';
+import trybewartsDesktop03 from '@projects/trybewarts03.png';
+import trybewartsDesktop04 from '@projects/trybewarts04.png';
+import trybewartsMobile01 from '@projects/trybewarts05.png';
+import trybewartsMobile02 from '@projects/trybewarts06.png';
 import todoDesktop from '@projects/todo-desktop.png';
 import todoMobile from '@projects/todo-desktop.png';
 import cotacoesFront from '@projects/cotacoes-front.png';
@@ -30,10 +36,22 @@ const projects = [
     info: 'Este projeto consiste em uma lista de tarefas, onde é possível selecionar tarefas, marcar como finalizadas e salvar em local storage, utilizado bibliotecas: sweerAlert (alertas) e GSAP (animações).',
     techs: ['HTML', 'CSS', 'Javascript', 'Greensock', 'sweetAlert2'],
     links: {
-      deploy: 'http://todo.lcds.me/',
+      deploy: 'http://todo-list.lcds.me/',
       github: 'https://github.com/lcds90/project-todo-list',
     },
     images: [todoDesktop, todoMobile],
+  },
+  {
+    id: 'trybewarts',
+    title: '[Projeto] Trybewarts',
+    description: 'Projeto em grupo realizado na Trybe, praticando e exercendo conceitos de formulários HTML e CSS com responsividade',
+    info: 'Este projeto consiste em um simples formulário onde é aplicado conceitos relacionados a semântica HTML e responsividade (mobile first) com CSS, onde ainda pude aplicar conceitos relacionados a transições e animações.',
+    techs: ['HTML', 'CSS', 'Javascript'],
+    links: {
+      deploy: 'https://lcds90.github.io/project-trybewarts/',
+      github: 'https://github.com/lcds90/project-trybewarts',
+    },
+    images: [trybewartsDesktop01, trybewartsDesktop02, trybewartsDesktop03, trybewartsDesktop04, trybewartsMobile01, trybewartsMobile02],
   },
   {
     id: 'cotacoes',
