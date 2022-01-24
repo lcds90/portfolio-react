@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gravatar-url": "^4.0.1",
     "next": "11.0.1",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
