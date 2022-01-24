@@ -69,7 +69,7 @@ export const HomeInfo = () => {
       </article>
       <article>
         <h2 className={style.welcome}>
-          Olá, seja bem vindo ao meu portfólio.
+          <i>Olá, seja bem vindo!</i> <br /><strong>Eu sou Leonardo Santos</strong>
         </h2>
         <div className={style.grid}>
           <p className={style.description}>
