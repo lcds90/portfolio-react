@@ -1,125 +1,157 @@
 .section {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 400px 1fr 100px;
-  flex-direction: column;
-  border-bottom: 0.5px solid var(--primary-color);
-  background-color: var(--primary-color-light);
-  padding: 10px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 400px 1fr 100px;
+	flex-direction: column;
+	border-bottom: 0.5px solid var(--primary-color);
+	background-color: var(--primary-color-light);
+	padding: 10px;
 }
 
 .articleInfo {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: flex-start;
-  align-items: flex-start;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	place-items: center;
 }
 
 .welcome {
-  text-align: center;
-  font-weight: 300;
-  font-size: 2rem;
-  color: var(--primary-color-dark);
-  padding: 5px;
-  margin: 10px 20px;
+	text-align: center;
+	font-weight: 300;
+	font-size: 2rem;
+	color: var(--primary-color-dark);
+	padding: 5px;
+	margin: 10px 20px;
 }
 
 .grid {
-  width: 100%;
-  display: grid;
-  padding: 10px;
-  grid: 1fr / 65% 35%;
-  place-items: center;
-  overflow: hidden;
+	width: 100%;
+	display: grid;
+	padding: 10px;
+	grid: 1fr / 65% 35%;
+	place-items: center;
+	overflow: hidden;
 }
 
 .description {
-  background-color: var(--primary-color-dark);
-  color: white;
-  padding: 5px;
-  width: 100%;
-  margin: 0;
-  line-height: 2rem;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  border: 2px white inset;
-  text-align: center;
-  font-weight: 200;
-  z-index: 10;
+	background-color: var(--primary-color-dark);
+	color: white;
+	padding: 5px;
+	width: 100%;
+	margin: 0;
+	line-height: 2rem;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	border: 2px white inset;
+	text-align: center;
+	font-weight: 200;
+	z-index: 10;
 }
 
 .description span {
-  font-weight: 500;
-  color: var(--primary-color-light);
+	font-weight: 500;
+	color: var(--primary-color-light);
 }
 
 .stacks {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
 }
 
 .stack {
-  width: 200px;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 10px 2px;
+	width: 200px;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 5px 2px rgba(0, 0, 0, 0.25);
+	border-radius: 10px 2px;
 }
 
 .profile {
-  border-radius: 25px;
-  height: 100%;
-  position: absolute;
-  z-index: 5;
-  left: 1vw;
-  top: 2vh;
+	border-radius: 25px;
+	width: 18rem;
+	z-index: 5;
+	left: 1vw;
+	top: 2vh;
+	box-shadow: 0 5px 2px rgba(0, 0, 0, 0.25);
+	position: relative;
+	overflow: hidden;
+  animation-name: Brightness;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
 .html5 {
-  background-color: rgb(227, 79, 38);
+	background-color: rgb(227, 79, 38);
 }
 
 .css3 {
-  background-color: rgb(48, 114, 183);
+	background-color: rgb(48, 114, 183);
 }
 
 .js {
-  background-color: rgb(247, 223, 30);
+	background-color: rgb(247, 223, 30);
 }
 
 .react {
-  background-color: rgb(32, 35, 42);
+	background-color: rgb(32, 35, 42);
 }
 
 .node {
-  background-color: rgb(67, 133, 61);
+	background-color: rgb(67, 133, 61);
 }
 
 .ts {
-  background-color: rgb(55, 122, 204);
+	background-color: rgb(55, 122, 204);
 }
 
 @media screen and (min-width: 600px) {
-  .section {
-    grid-template-columns: 25% 1fr;
-    grid-template-rows: 90% 10%;
-  }
+	.section {
+		grid-template-columns: 25% 1fr;
+		grid-template-rows: 90% 10%;
+	}
 
-  .section > article:nth-of-type(3) {
-    grid-column: span 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+	.section > article:nth-of-type(3) {
+		grid-column: span 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
 
+@keyframes Brightness {
+	0% {
+		filter: brightness(1);
+		filter: contrast(1);
+		-webkit-filter: brightness(1);
+		-webkit-filter: contrast(1);
+    transform: scale(1) translateX(0);
+	}
+  25% {
+    transform: scale(1.005) translateX(-2.5%);
+  }
+	50% {
+		filter: brightness(0.4);
+		filter: contrast(0.4);
+		-webkit-filter: brightness(1.4);
+		-webkit-filter: contrast(1.4);
+    transform: scale(1.05) translateX(0%);
+	}
+  75% {
+    transform: scale(1.005) translateX(2.5%);
+  }
+	100% {
+		filter: brightness(1);
+		filter: contrast(1);
+		-webkit-filter: brightness(1);
+		-webkit-filter: contrast(1);
+    transform: scale(1) translateX(0);
+	}
 }
