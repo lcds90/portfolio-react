@@ -5,7 +5,8 @@
     align-items: center;
     justify-content: space-around;
     background-color: var(--primary-color-dark);
-    border-radius: 25px;
+    border-radius: 5px;
+    right: 0;
 }
 
 .contact {

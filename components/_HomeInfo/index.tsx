@@ -2,7 +2,7 @@ import { Contact } from '@components/Contact'
 
 import style from './style.module.css';
 
-import profilePic from '@img/profile.png';
+import profilePic from '@img/profile2.png';
 import svg_html5 from '@svg/html5.svg';
 import svg_css3 from '@svg/css3.svg';
 import svg_javascript from '@svg/javascript.svg';
@@ -61,11 +61,8 @@ export const HomeInfo = () => {
   return (
     <section className={style.section}>
       <article className={style.articleInfo}>
-        <h1 className={style.nameProfile}>Leonardo Conceição <br /> dos Santos</h1>
         <img
           className={style.profile}
-          width='400px'
-          height='400px'
           src={profilePic.src}
           alt='Foto de Leonardo Santos'
         />
